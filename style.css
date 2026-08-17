@@ -130,15 +130,15 @@ body {
     display: block;
     border-left: 1px solid #ccc;
 }
-.main .container {
+.main header .container {
     padding: 30px 40px;
 }
-.main .container .booking-confirmed {
+.main header .container .booking-confirmed {
     display: flex;
     justify-content: space-between;
     align-items: flex-end;
 }
-.main .container .booking-confirmed .main-text > span {
+.main header .container .booking-confirmed .main-text > span {
     font-size: 12px;
     letter-spacing: 2px;
     font-weight: 500;
@@ -146,17 +146,17 @@ body {
     color: var(--Neutral-600);
     text-transform: uppercase;
 }
-.main .container .booking-confirmed .main-text h1 {
+.main header .container .booking-confirmed .main-text h1 {
     margin: 8px 0 0 0;
     font-family: var(--fraunces);
     font-weight: 500;
 }
-.main .container .booking-confirmed .main-text h1 > span {
+.main header .container .booking-confirmed .main-text h1 > span {
     color: var(--Terracotta-600);
     font-style: italic;
 }
 
-.main .container .booking-confirmed .actions button {
+.main header .container .booking-confirmed .actions button {
     padding: 10px 16px;
     border: 1px solid;
     outline: none;
@@ -166,12 +166,122 @@ body {
     font-weight: 500;
     cursor: pointer;
 }
-.main .container .booking-confirmed .actions button:first-child {
+.main header .container .booking-confirmed .actions button:first-child {
     background-color: #eee ;
     border-color: #ccc;
 }
-.main .container .booking-confirmed .actions button:last-child {
+.main header .container .booking-confirmed .actions button:last-child {
     background-color: #151515;
     color: var(--Neutral-100);
     border-color: #151515;
+}
+
+
+.main .hero .container .booking-cards .receipt-card {
+    display: flex;
+    flex-direction: column;
+    max-width: 380px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 30px 20px;
+    background-color: var(--Neutral-100);
+}
+.main .hero .container .booking-cards .receipt-card > * {
+    display: flex;
+    justify-content: space-between;
+}
+.main .hero .container .booking-cards .receipt-card .infos {
+    padding-bottom: 12px;
+    border-bottom: 1px dashed var(--Neutral-600);
+}
+.main .hero .container .booking-cards .receipt-card .infos div:first-child span:first-child {
+    font-family: var(--dm-mono);
+    font-size: 14px;
+    color: var(--Neutral-600);
+    display: block;
+    margin-bottom: 8px;
+}
+.main .hero .container .booking-cards .receipt-card .infos div:first-child span:last-child {
+    font-family: var(--fraunces);
+    font-size: 25px;
+    display: block;
+}
+.receipt-card .infos div:last-child span {
+    font-family: var(--dm-mono);
+    font-size: 12px;
+    display: block;
+    color: var(--Neutral-600);
+}
+.receipt-card .infos div:last-child span:first-child {
+    margin-bottom: 6px;
+}
+
+.date {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--Neutral-600);
+}
+.date div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.date div span:first-child,
+.date div span:last-child {
+    font-family: var(--dm-mono);
+    color: var(--Neutral-600);
+    font-size: 14px;
+}
+.date div span:last-child {
+    font-weight: 500;
+}
+.date div span:nth-child(2) {
+    font-size: 30px;
+    font-family: var(--fraunces);
+    margin-top: 15px;
+    margin-bottom: 10px;
+}
+.item-prices {
+    padding-top: 12px;
+    padding-bottom: 20px;
+    border-bottom: 1px dashed var(--Neutral-600);
+}
+.item-prices .items{
+    width: 100%;
+}
+.item-prices .items div {
+    margin-top: 8px;
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+}
+.item-prices .items div span {
+    font-family: var(--dm-mono);
+    color: var(--Neutral-600);
+    font-size: 14px;
+} 
+.item-prices .items div:not(:last-child) span {
+    font-weight: 500;
+}
+
+.total-price {
+    margin-top: 8px;
+    flex-wrap: wrap;
+    gap: 8px;
+    justify-content: space-between;
+    align-items: center;
+}
+.total-price span {
+    flex-basis: calc(50% - 8px);
+}
+.total-price span:first-child,
+.total-price span:last-of-type {
+    font-family: var(--dm-mono);
+    font-size: 14px;
+    color: var(--Neutral-600);
+}
+.total-price span:nth-child(2) {
+    font-family: var(--fraunces);
+    font-size: 30px;
+    text-align: end;
 }
