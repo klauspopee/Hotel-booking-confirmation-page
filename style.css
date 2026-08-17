@@ -34,16 +34,17 @@
 }
 
 body {
-
     background-color: var(--Neutral-200);
     height: 100vh;
+    display: flex;
+    gap: 10px;
 }
 
 .sidebar {
     padding: 15px 0 15px 20px;
     max-width: 17vw;
     height: 100%;
-    border-right: 1px solid #ccc;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -121,4 +122,56 @@ body {
 }
 .sidebar .location span:not(:last-child) {
     margin-bottom: 8px;
+}
+
+
+.main {
+    flex-grow: 1;
+    display: block;
+    border-left: 1px solid #ccc;
+}
+.main .container {
+    padding: 30px 40px;
+}
+.main .container .booking-confirmed {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+.main .container .booking-confirmed .main-text > span {
+    font-size: 12px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    font-family: var(--dm-mono);
+    color: var(--Neutral-600);
+    text-transform: uppercase;
+}
+.main .container .booking-confirmed .main-text h1 {
+    margin: 8px 0 0 0;
+    font-family: var(--fraunces);
+    font-weight: 500;
+}
+.main .container .booking-confirmed .main-text h1 > span {
+    color: var(--Terracotta-600);
+    font-style: italic;
+}
+
+.main .container .booking-confirmed .actions button {
+    padding: 10px 16px;
+    border: 1px solid;
+    outline: none;
+    border-radius: 24px;
+    font-family: var(--dm-sans);
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+}
+.main .container .booking-confirmed .actions button:first-child {
+    background-color: #eee ;
+    border-color: #ccc;
+}
+.main .container .booking-confirmed .actions button:last-child {
+    background-color: #151515;
+    color: var(--Neutral-100);
+    border-color: #151515;
 }
