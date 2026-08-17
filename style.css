@@ -1,0 +1,124 @@
+* {
+    box-sizing: border-box;
+}
+:root {
+    --fraunces: "Fraunces", serif;
+    --dm-sans: "DM Sans", sans-serif;
+    --dm-mono : "DM Mono", monospace;
+
+    --Neutral-900: hsl(33, 15%, 15%);
+    --Neutral-800: hsl(33, 22%, 20%);
+    --Neutral-700: hsl(32, 20%, 29%);
+    --Neutral-600: hsl(33, 17%, 41%);
+    --Neutral-400: hsl(36, 22%, 86%);
+    --Neutral-200: hsl(30, 24%, 93%);
+    --Neutral-100: hsl(35, 60%, 96%);
+    --Neutral-50: hsl(40, 60%, 98%);
+    --Neutral-0: hsl(0, 0%, 100%);
+
+    --Sun-500: hsl(42, 83%, 58%);
+    --Sun-300: hsl(44, 84%, 75%);
+    --Sun-200: hsl(45, 100%, 74%);
+    --Sun-50: hsl(41, 100%, 93%);
+
+    --Terracotta-700: hsl(15, 69%, 37%);
+    --Terracotta-600: hsl(15, 74%, 41%);
+    --Terracotta-500: hsl(18, 62%, 47%);
+    --Terracotta-400: hsl(22, 72%, 56%);
+
+    --Blue-500: hsl(230, 49%, 56%);
+
+    --Rose-500: hsl(340, 48%, 52%);
+
+    -p: 14px;
+}
+
+body {
+
+    background-color: var(--Neutral-200);
+    height: 100vh;
+}
+
+.sidebar {
+    padding: 15px 0 15px 20px;
+    max-width: 17vw;
+    height: 100%;
+    border-right: 1px solid #ccc;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.sidebar .logo {
+    padding-bottom: 15px;
+    border-bottom: 1px solid #ccc;
+}
+.sidebar nav {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.sidebar nav ul {
+    margin: 0;
+    padding: 0;
+}
+.sidebar nav ul li {
+    margin: 0;
+    margin-bottom: 8px;
+    padding: 8px 5px;
+    border: 1px solid transparent;
+    border-radius: 8px;
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-family: var(--dm-sans);
+    font-weight: 500;
+    color: var(--Neutral-600);
+    cursor: pointer;
+    transition: .3s;
+}
+.sidebar nav ul li:hover {
+    background-color: var(--Neutral-0);
+}
+
+
+.sidebar nav .weather {
+    padding: 8px 16px;
+    background-color: var(--Sun-300);
+    background-image: url(assets/images/icon-weather.svg);
+    background-repeat: no-repeat;
+    border-radius: 16px;
+    background-position: 110% -180%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.sidebar nav .weather span:first-child,
+.sidebar nav .weather span:last-child {
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--Neutral-600);
+    font-family: var(--dm-mono);
+}
+.sidebar nav .weather span:nth-child(2) {
+    font-size: 32px;
+    font-family: var(--fraunces);
+}
+
+.sidebar .location {
+    padding-top: 25px;
+    font-size: 14px;
+    font-family: var(--dm-mono);
+    color: var(--Neutral-600);
+    border-top: 1px solid #ccc;
+}
+.sidebar .location span {
+    display: block;
+}
+.sidebar .location span:not(:last-child) {
+    margin-bottom: 8px;
+}
