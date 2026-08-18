@@ -176,7 +176,16 @@ body {
     border-color: #151515;
 }
 
-
+.main .hero .container {
+    padding: 0px 40px;
+}
+.main .hero .container .booking-cards {
+    display: flex;
+    justify-content: space-between;
+    background-image: url(assets/images/illustration-sun.svg);
+    background-repeat: no-repeat;
+    background-position: center center;
+}
 .main .hero .container .booking-cards .receipt-card {
     display: flex;
     flex-direction: column;
@@ -284,4 +293,64 @@ body {
     font-family: var(--fraunces);
     font-size: 30px;
     text-align: end;
+}
+
+.welcome-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-width: 380px;
+    border: 1px solid transparent;
+    border-radius: 12px;
+    padding: 30px 20px;
+    background: HSL(15, 74%, 41%);
+    background: linear-gradient(44deg, rgba(182, 66, 27, 1) 0%, rgba(245, 216, 138, 1) 250%);
+}
+.welcome-card .card-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+    border-top: 1px dashed var(--Neutral-400);
+    padding-top: 12px;
+}
+.welcome-card .card-head span {
+    font-family: var(--dm-mono);
+    font-size: 14px;
+    color: var(--Neutral-100);
+}
+
+.welcome-card .main-text {
+    margin-bottom: 30px;
+}
+.welcome-card .main-text span {
+    font-family: var(--fraunces);
+    color: var(--Sun-300);
+    font-size: 20px;
+    font-style: italic;
+    line-height: 1.6;
+}
+.welcome-card .main-text span span {
+    display: block;
+    font-size: 32px;
+    color: var(--Neutral-200);
+}
+.welcome-card .main-text p {
+    font-family: var(--dm-sans);
+    font-size: 14px;
+    color: var(--Neutral-400);
+    line-height: 1.5;
+}
+.welcome-card .card-foot span{
+    display: block;
+    color: var(--Neutral-400);
+}
+.welcome-card .card-foot span:first-child {
+    font-size: 12px;
+    font-family: var(--dm-mono);
+    margin-bottom: 8px;
+}
+.welcome-card .card-foot span:last-child {
+    font-family: var(--fraunces);
+    font-size: 20px;
+
 }
